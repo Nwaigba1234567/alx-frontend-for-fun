@@ -17,8 +17,5 @@ if not os.path.exists(markdown_file):
     print(f"Missing {markdown_file}", file=sys.stderr)
     sys.exit(1)
 
-# Your code to convert Markdown to HTML and write to output_file goes here...
-
 # Exit successfully
 sys.exit(0)
-
