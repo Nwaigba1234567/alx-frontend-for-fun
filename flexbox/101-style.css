@@ -1,0 +1,91 @@
+:root {
+  --box1-width: 100px;
+  --box1-height: calc(var(--box1-width) * 0.5);
+  --box2-width: calc(var(--box1-width) * 1.2);
+  --box2-height: calc(var(--box2-width) * 0.7);
+  --box3-width: calc(var(--box1-width)* 3.5);
+  --box3-height: calc(var(--box3-width) * 0.55);
+  --box4-width: calc(var(--box1-width) * 1.2);
+  --box4-height: calc(var(--box2-width) * 0.7);
+  --box5-width: var(--box1-width);
+  --box5-height: calc(var(--box1-width) * 0.5);
+
+  --clr-green: #50c650;
+  --clr-cyan: rgb(84, 114, 247);
+  --clr-dark-blue: rgb(60, 60, 91);
+  --clr-magenta: rgb(192, 35, 192);
+  --clr-orange: #FFA500;
+  --margin-top: 1rem;
+  --margin-left: 1rem;
+}
+.container {
+  position:absolute;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+.box {
+  align-items: flex-start;
+
+
+}
+/* .box1, .box2, .box3, .box4, .box5 { */
+.box {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  color: white;
+
+
+}
+.box1 {
+  width: var(--box1-width);
+  height: var(--box1-height);
+  font-size: calc(var(--box1-width) * 0.2);
+  background-color: var(--clr-green);
+  bottom: calc(var(--margin-top) * -7.2);
+}
+
+.box2 {
+
+  width: var(--box2-width) ;
+  height: var(--box2-height);
+  font-size: calc(var(--box2-width) * 0.3);
+  background-color: var(--clr-cyan);
+  bottom: calc(var(--margin-top) * -5.5);
+
+
+}
+.box3 {
+
+  width: var(--box3-width) ;
+  height: var(--box3-height);
+  font-size: calc(var(--box3-width) * 0.3);
+  background-color: var(--clr-dark-blue);
+
+
+}
+.box4 {
+
+  width: var(--box4-width) ;
+  height: var(--box4-height);
+  font-size: calc(var(--box4-width) * 0.25);
+  background-color: var(--clr-magenta);
+  bottom: calc(var(--margin-top) * -5.5);
+
+}
+.box5 {
+
+  width: var(--box5-width) ;
+  height: var(--box5-height);
+  font-size: calc(var(--box5-width) * 0.25);
+  background-color: var(--clr-orange);
+  bottom: calc(var(--margin-top) * -7.2);
+}
