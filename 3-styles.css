@@ -1,0 +1,141 @@
+body {
+ margin-left: 250px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-open-button {
+  background-color: rgb(167, 22, 8);
+  margin: 15px;
+  height: 70px;
+  width: 70px;
+  position: relative;
+  padding: 20px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.menu-open-button:hover {
+  height: 80px;
+  width: 80px;
+}
+
+.menu-item {
+  background-color: rgb(167, 22, 8);
+  margin: 10px;
+  padding: 25px;
+  border-radius: 200px;
+  border: 1px solid rgb(167, 22, 8);
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute; /* Set absolute positioning */
+  top: 30px; /* Initially hide behind the menu-open-button */
+  transition: top 0.2s ease-in-out; /* Smooth transition for top position */
+  z-index: -1;
+}
+
+.menu-item:hover {
+  background-color: white;
+  border: 1px solid rgb(167, 22, 8);
+  color: rgb(167, 22, 8);
+}
+
+.menu-item:hover i {
+  color: rgb(167, 22, 8);
+}
+
+.menu-item i {
+  color: white;
+  font-size: 30px;
+}
+
+
+.menu-line {
+  height: 4px;
+  width: 35px;
+  background-color: #f6f6f8;
+  border-radius: 25px;
+  position: absolute;
+}
+
+.menu-line-1 {
+  top: 37%;
+}
+
+.menu-line-3 {
+  top: 59%;
+}
+
+.menu-open-button .menu-line {
+  transition: top 0.1s ease-in-out, transform 0.1s ease-in-out; /* Smooth transitions */
+
+}
+
+input:checked~.menu-open-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input:checked~.menu-item:nth-child(3) {
+  top: calc(15% + 30px);
+}
+input:checked~.menu-item:nth-child(4) {
+  top: calc(30% + 30px);
+}
+input:checked~.menu-item:nth-child(5) {
+  top: calc(45% + 30px);
+}
+input:checked~.menu-item:nth-child(6) {
+  top: calc(60% + 30px);
+}
+input:checked~.menu-item:nth-child(7) {
+  top: calc(75% + 30px);
+}
+
+input:checked~.menu-open-button {
+  height: 43px;
+  width: 43px;
+}
+
+
+input:checked~.menu-open-button .menu-line-1 {
+  top: 50%;
+  transform: rotate(45deg);
+  width: 30px;
+  /* transition: 0.1s ease-in-out; */
+}
+
+input:checked~.menu-open-button .menu-line-2 {
+  opacity: 0;
+}
+
+input:checked~.menu-open-button .menu-line-3 {
+  top: 50%;
+  transform: rotate(-45deg);
+  width: 30px;
+  /* transition: 0.1s ease-in-out; */
+}
+
+input {
+  display: none;
+}
